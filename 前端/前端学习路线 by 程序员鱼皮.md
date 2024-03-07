@@ -1,23 +1,8 @@
 # 前端学习路线 by 程序员鱼皮
 
-> 本文作者：[程序员鱼皮](https://yuyuanweb.feishu.cn/wiki/Abldw5WkjidySxkKxU2cQdAtnah)
->
-> 本站地址：[https://codefather.cn](https://codefather.cn)
+[toc]
 
 
-
-💂 + 💻 = 👴🏽
-
-建议先观看视频导读：[https://www.bilibili.com/video/BV1nh411e7oG/](https://www.bilibili.com/video/BV1nh411e7oG/)
-
-## 路线特点
-
-1. 一份全面的前端知识点大梳理和汇总
-2. 分阶段学习，每个阶段给出学习目标
-3. 使用符号对知识点的重要程度做了区分，按需学习
-4. 知识点附有描述和资源链接
-5. 提供一份清晰的个人顺序学习路线方法
-6. 提供大量优质学习资源
 
 ## 符号表
 
@@ -31,29 +16,6 @@
 -  📚 资源 
 -  🎯 目标 
 
-## 大纲
-
-1. 前言 - 学编程需要的特质
-2. 前端学习七阶段 
-   1. 前端入门
-   2. 巩固基础
-   3. 前端工程化
-   4. 前端优化
-   5. 前端生态
-   6. 前端求职
-   7. 前端未来
-3. 我的前端学习路线
-4. 尾声 - 持续学习
-
-## 前言 - 学编程需要的特质
-
-相信自己有能力，那么你就真的会有！
-
-- 兴趣
-- 坚持
-- 付出
-- 心态
-
 ## 一、前端入门
 
 -  💬 描述：学习前端基础三件套，建议从实战开始，边学边练，培养兴趣，快速入门。 
@@ -63,39 +25,6 @@
    - W3Cschool 编程入门实战：[https://www.w3cschool.cn/codecamp/](https://www.w3cschool.cn/codecamp/)
    - pink老师前端入门教程：[https://www.bilibili.com/video/BV14J4114768](https://www.bilibili.com/video/BV14J4114768)
 -  🎯 目标：了解和实践各语言的基础语法，并能使用开发工具来独立开发一个留言板网站。 
-
-### ⭐️ 开发工具
-
-- 💬 描述：工欲善其事，必先利其器。
-
-#### 浏览器
-
-- ⭐️ Chrome
-- ✅ Edge
-- ✅ Firefox
-- ❌ Opera
-- Safari
-
-#### 编辑器
-
-- ⭐️ VSCode
-- ✅ WebStorm
-- Atom
-- ⭐️ Sublime Text
-- HBuilder X
-- 记事本
-- 在线 IDE
-
-#### 文档笔记
-
-- ✅ Markdown 语法
-- ✅ Typora
-- 在线笔记 
-   - 语雀
-   - 腾讯文档
-   - 石墨文档
-   - 印象笔记
-- Mdnice
 
 ### ⭐️ HTML
 
@@ -131,7 +60,7 @@
 
 -  💬 描述：层叠样式表，用于设计风格和布局。 
 -  📚 资源：[https://developer.mozilla.org/zh-CN/docs/Learn/CSS](https://developer.mozilla.org/zh-CN/docs/Learn/CSS) 
--  ⭐️ 基本语法 
+-  ⭐️ 基本语法
 -  ⭐️ 引入方式 
    - 行内样式
    - 内部样式表

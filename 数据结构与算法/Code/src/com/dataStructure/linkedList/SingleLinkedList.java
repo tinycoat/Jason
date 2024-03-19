@@ -4,6 +4,10 @@ public class SingleLinkedList {
     // 头节点
     private HeroNode head = new HeroNode(0, "", "");
 
+    public HeroNode getHead() {
+        return head;
+    }
+
     // 向链表尾部添加数据
     public void add(HeroNode heroNode) {
         HeroNode temp = head;
@@ -105,5 +109,38 @@ public class SingleLinkedList {
             System.out.println(temp.toString());
             temp = temp.next;
         }
+    }
+
+    // 获取单链表的节点个数（若含头节点，忽略不计）
+    /*
+     * @param head 链表头节点
+     * @return 返回的就是有效节点的个数
+     */
+    public static int count(HeroNode head) {
+        HeroNode temp = head;
+        int count = 0;
+        while (temp.next != null) {
+            count++;
+            temp = temp.next;
+        }
+        return count;
+    }
+
+    // 查找单链表的倒数第k个节点
+    public static HeroNode findLastKNode(HeroNode head, int index) {
+        if (head.next == null) {
+            System.out.println("链表为空，无法查找");
+            return null;
+        }
+        int sum = count(head);
+        if (index < 0 || index > sum) {
+            System.out.println("index的值不合理，无法查找");
+            return null;
+        }
+        HeroNode temp = head.next;
+        for (int i = 0; i < sum - index; i++) {
+            temp = temp.next;
+        }
+        return temp;
     }
 }

@@ -1,5 +1,8 @@
 package com.dataStructure.linkedList;
 
+import static com.dataStructure.linkedList.SingleLinkedList.count;
+import static com.dataStructure.linkedList.SingleLinkedList.findLastKNode;
+
 public class LinkedListDemo {
     public static void main(String[] args) {
         HeroNode hero1 = new HeroNode(1, "莫甘娜", "堕落天使");
@@ -17,6 +20,7 @@ public class LinkedListDemo {
 //        heroesFromLOL.add(hero1);
 //        heroesFromLOL.add(hero4);
 
+        System.out.println("通过序号，添加几位英雄：");
         heroesFromLOL.addByOrder(hero2);
         heroesFromLOL.addByOrder(hero5);
         heroesFromLOL.addByOrder(hero3);
@@ -26,14 +30,30 @@ public class LinkedListDemo {
         heroesFromLOL.list();
 
         // 修改
+        System.out.println("修改序号为1的英雄为 涤魂圣枪-赛纳 ：");
+
         heroesFromLOL.update(new HeroNode(1, "赛纳", "涤魂圣枪"));
 
         heroesFromLOL.list();
 
         // 删除
+        System.out.println("删除序号为3的英雄");
+
         heroesFromLOL.delete(3);
 
         heroesFromLOL.list();
 
+        // 统计有效元素个数
+        System.out.println("统计加入的英雄个数：");
+        System.out.println("共加入英雄" + count(heroesFromLOL.getHead()) + "位");
+
+        // 查找倒数第k个元素
+        System.out.println("查找倒数第k个元素：");
+        HeroNode lastKNode = findLastKNode(heroesFromLOL.getHead(), 2);
+        if (lastKNode != null) {
+            System.out.println(lastKNode.toString());
+        } else {
+            System.out.println("查找失败！");
+        }
     }
 }

@@ -1,7 +1,6 @@
 package com.dataStructure.linkedList;
 
-import static com.dataStructure.linkedList.SingleLinkedList.count;
-import static com.dataStructure.linkedList.SingleLinkedList.findLastKNode;
+import static com.dataStructure.linkedList.SingleLinkedList.*;
 
 public class LinkedListDemo {
     public static void main(String[] args) {
@@ -55,5 +54,13 @@ public class LinkedListDemo {
         } else {
             System.out.println("查找失败！");
         }
+
+        // 逆转链表
+        System.out.println("逆转数组：");
+        revert(heroesFromLOL.getHead());
+        heroesFromLOL.list();
+        System.out.println("再次逆转数组：");
+        revert(heroesFromLOL.getHead());
+        heroesFromLOL.list();
     }
 }

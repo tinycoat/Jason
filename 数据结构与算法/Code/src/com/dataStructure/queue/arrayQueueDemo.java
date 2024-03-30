@@ -2,7 +2,7 @@ package com.dataStructure.queue;
 
 import java.util.Scanner;
 
-public class arrayQueue {
+public class arrayQueueDemo {
     public static void main(String[] args) {
         // 用于用户输入
         char key;

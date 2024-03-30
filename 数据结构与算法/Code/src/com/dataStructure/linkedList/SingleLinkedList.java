@@ -143,4 +143,17 @@ public class SingleLinkedList {
         }
         return temp;
     }
+
+    public static void revert(HeroNode head) {
+        HeroNode reverseHead = new HeroNode(0, "", "");
+        reverseHead.next = null;
+        HeroNode temp = head.next;
+        while (temp != null) {
+            HeroNode nextNode = temp.next;
+            temp.next = reverseHead.next;
+            reverseHead.next = temp;
+            temp = nextNode;
+        }
+        head.next = reverseHead.next;
+    }
 }

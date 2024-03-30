@@ -1,4 +1,4 @@
-package com.dataStructure.parseArray;
+package com.dataStructure.ParseArray;
 
 /*
  *   五子棋棋盘是二维数组，使用稀疏数组保存

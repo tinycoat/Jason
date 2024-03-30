@@ -1,6 +1,6 @@
-package com.dataStructure.linkedList;
+package com.dataStructure.SinglelinkedList;
 
-import static com.dataStructure.linkedList.SingleLinkedList.*;
+import static com.dataStructure.SinglelinkedList.SingleLinkedList.*;
 
 public class LinkedListDemo {
     public static void main(String[] args) {

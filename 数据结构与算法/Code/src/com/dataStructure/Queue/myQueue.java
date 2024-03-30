@@ -1,4 +1,4 @@
-package com.dataStructure.queue;
+package com.dataStructure.Queue;
 
 /*
 * 队列实现

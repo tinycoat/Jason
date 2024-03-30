@@ -1,4 +1,4 @@
-package com.dataStructure.queue;
+package com.dataStructure.Queue;
 
 public class myCircleQueue {
     private int maxSize;    // 数组的最大容量

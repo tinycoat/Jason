@@ -1,4 +1,4 @@
-package com.dataStructure.linkedList;
+package com.dataStructure.SinglelinkedList;
 
 import java.util.Stack;
 

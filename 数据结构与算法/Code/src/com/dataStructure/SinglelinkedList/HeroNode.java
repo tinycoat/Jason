@@ -1,4 +1,4 @@
-package com.dataStructure.linkedList;
+package com.dataStructure.SinglelinkedList;
 
 public class HeroNode {
     public int heroNum;

@@ -55,12 +55,28 @@ public class LinkedListDemo {
             System.out.println("查找失败！");
         }
 
+        // 逆序打印链表。不改变链表结构
+        System.out.println("逆序打印链表：");
+        reversePrint(heroesFromLOL.getHead());
+
         // 逆转链表
         System.out.println("逆转数组：");
         revert(heroesFromLOL.getHead());
         heroesFromLOL.list();
         System.out.println("再次逆转数组：");
         revert(heroesFromLOL.getHead());
+        heroesFromLOL.list();
+
+        // 合并两个单链表
+        SingleLinkedList anotherLinkedList = new SingleLinkedList();
+        HeroNode heroNode1 = new HeroNode(3, "凯南", "狂暴之心");
+        HeroNode heroNode2 = new HeroNode(6, "娜美", "唤潮鲛姬");
+        anotherLinkedList.addByOrder(heroNode2);
+        anotherLinkedList.addByOrder(heroNode1);
+        System.out.println("新增小部分英雄：");
+        anotherLinkedList.list();
+        System.out.println("合并两个集合：");
+        merge(heroesFromLOL.getHead(), anotherLinkedList.getHead());
         heroesFromLOL.list();
     }
 }

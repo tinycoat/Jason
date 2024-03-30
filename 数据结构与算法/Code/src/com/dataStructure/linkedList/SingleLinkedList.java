@@ -1,5 +1,7 @@
 package com.dataStructure.linkedList;
 
+import java.util.Stack;
+
 public class SingleLinkedList {
     // 头节点
     private HeroNode head = new HeroNode(0, "", "");
@@ -144,6 +146,7 @@ public class SingleLinkedList {
         return temp;
     }
 
+    // 逆转数组（结构）
     public static void revert(HeroNode head) {
         HeroNode reverseHead = new HeroNode(0, "", "");
         reverseHead.next = null;
@@ -155,5 +158,50 @@ public class SingleLinkedList {
             temp = nextNode;
         }
         head.next = reverseHead.next;
+    }
+
+    // 逆序打印链表，使用栈的性质
+    public static void reversePrint (HeroNode head) {
+        if (head.next == null) {
+            System.out.println("链表为空，无法打印");
+            return;
+        }
+        HeroNode temp = head.next;
+        Stack<HeroNode> heroNodeStack = new Stack<>();
+        while (temp != null) {
+            heroNodeStack.push(temp);
+            temp = temp.next;
+        }
+        while (!heroNodeStack.isEmpty()) {
+            System.out.println(heroNodeStack.pop());
+        }
+    }
+
+    // 合并两个链表
+    public static void merge (HeroNode head, HeroNode anotherHead) {
+        HeroNode newHead = new HeroNode(0, "", "");
+        HeroNode cur = newHead;
+        HeroNode temp = head.next;
+        HeroNode anotherTemp = anotherHead.next;
+        while (temp != null || anotherTemp != null) {
+            if (temp == null) {
+                cur.next = anotherTemp;
+                break;
+            }
+            if (anotherTemp == null) {
+                cur.next = temp;
+                break;
+            }
+            if (temp.heroNum < anotherTemp.heroNum) {
+                cur.next = temp;
+                temp = temp.next;
+                cur = cur.next;
+            } else {
+                cur.next = anotherTemp;
+                anotherTemp = anotherTemp.next;
+                cur = cur.next;
+            }
+        }
+        head.next = newHead.next;
     }
 }

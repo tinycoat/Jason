@@ -1,4 +1,4 @@
-package com.algorithm.Josephu;
+package com.dataStructure.CircleLinkedList;
 
 public class CircleLinkedList {
     private Boy first;

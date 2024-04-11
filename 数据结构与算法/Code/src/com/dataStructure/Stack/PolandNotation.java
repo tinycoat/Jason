@@ -7,18 +7,18 @@ public class PolandNotation {
     public static void main(String[] args) {
         // 逆波兰表达式：(3+4)*5-6 --> 3 4 + 5 * 6 -
         Scanner scanner = new Scanner(System.in);
-        System.out.print("输入一个逆波兰表达式：");
-        String str = scanner.next();
-        char[] charArray = str.toCharArray();
+        System.out.print("输入一个逆波兰表达式(空格分隔)：");
+        String str = scanner.nextLine();
+        String[] strArray = str.split(" ");
         Stack<Integer> stack = new Stack<>();
-        for (char item : charArray) {
-            if (isNum(item)) {
-                stack.push(item - '0');
+        for (String item : strArray) {
+            if (isNum(item.charAt(0))) {
+                stack.push(Integer.parseInt(item));
             }
-            if (isOper(item)) {
+            if (isOper(item.charAt(0))) {
                 int num1 = stack.pop();
                 int num2 = stack.pop();
-                stack.push(cal(num2, num1, item));
+                stack.push(cal(num2, num1, item.charAt(0)));
             }
         }
         System.out.print("计算结果为：" + stack.pop());

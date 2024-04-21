@@ -1,12 +1,31 @@
 package com.algorithm.Sort;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 
 public class SelectSort {
     public static void main(String[] args) {
-        int[] originNums = {101, 34, 119, 1};
-        System.out.println("原数组：" + Arrays.toString(originNums));
-        selectSort(originNums, true);
+//        int[] originNums = {101, 34, 119, 1};
+//        System.out.println("原数组：" + Arrays.toString(originNums));
+//        selectSort(originNums, true);
+
+        // 选择排序速度测试
+        int[] arr = new int[80000];
+        for (int i = 0; i < 80000; i++) {
+            arr[i] = (int) (Math.random() * 80000); //生成一个[0,80000)的数
+        }
+        Date date1 = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String formatted1 = simpleDateFormat.format(date1);
+        System.out.println("排序前：" + formatted1);
+
+        selectSort(arr, false);
+
+        Date date2 = new Date();
+        String formatted2 = simpleDateFormat.format(date2);
+        System.out.println("排序后：" + formatted2);
+
     }
 
     public static void selectSort(int[] nums, boolean needShowProgress) {
